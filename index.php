@@ -221,7 +221,7 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Rules</div>
               <div class="beading-stuff">
-                <div class="beading-bar-col"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
+                <div class="beading-bar-col caution-tape"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
                     id="selectRuleCompression"></select></div>
                 <div class="beading-bar-col"><span>Rule module sorting</span> <select class="beading-select"
                     id="selectModuleSorting">
@@ -266,6 +266,7 @@
                     </div>
                     <div class="beading-bar-row"><span>Show grid text</span><input type="checkbox"
                         class="checkbox checkbox-secondary" id="checkboxShowGridText"></div>
+                  <div class="caution-tape">
                     <div class="p-2">
                       <div class="font-bold">Filters</div>
                       <div class="text-sm tracking-tight">The following are various ways to filter the grid. The filters
@@ -297,6 +298,8 @@
                         class="checkbox checkbox-secondary" id="checkboxRequireColorSplit"></div>
                     <div class="beading-bar-row"><span>Require not color split</span> <input type="checkbox"
                         class="checkbox checkbox-secondary" id="checkboxRequireNotColorSplit"></div>
+
+                  </div>
                   </div>
                 </div>
               </div>
@@ -304,12 +307,16 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Advanced</div>
               <div class="beading-stuff">
-                <div class="beading-bar-row"><span>Colors <kbd>c/C</kbd></span> <span
-                    class="flex items-center gap-2"><span class="inline-flex gap-1"><input type="radio"
-                        class="radio radio-secondary" data-colors="4" name="radioColors">4</span> <span
-                      class="inline-flex gap-1"><input type="radio" class="radio radio-secondary" data-colors="5"
-                        name="radioColors">5</span> <span class="inline-flex gap-1"><input type="radio"
-                        class="radio radio-secondary" data-colors="6" name="radioColors">6</span></span></div>
+                <div class="beading-bar-row caution-tape">
+                  <span>Colors <kbd>c/C</kbd></span> <span
+                    class="flex items-center gap-2">
+                  <span class="inline-flex gap-1"><input type="radio"
+                        class="radio radio-secondary" data-colors="4" name="radioColors">4</span>
+                  <span class="inline-flex gap-1"><input type="radio" class="radio radio-secondary" data-colors="5"
+                        name="radioColors">5</span>
+                  <!-- <span class="inline-flex gap-1"><input type="radio"
+                        class="radio radio-secondary" data-colors="6" name="radioColors">6</span></span> -->
+                </div>
                 <div class="beading-bar-row"><span>Clear toggles <kbd>e</kbd></span>
                   <div class="beading-action-button" id="buttonClearToggles">clear</div>
                 </div>

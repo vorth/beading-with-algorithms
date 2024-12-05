@@ -3959,6 +3959,12 @@ input[type=range] {
   display: block !important
 }
 
+.caution-tape {
+  border: 4px solid black;
+  outline-offset: -4px;
+  outline: 4px dashed rgb(253, 182, 1);
+}
+
 @media print {
   .print\:hidden {
     display: none !important
@@ -4100,3 +4106,4 @@ input[type=range] {
     line-height: 1.75rem !important
   }
 }
+
