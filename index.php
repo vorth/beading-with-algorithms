@@ -129,6 +129,11 @@
                 <div class="beading-bar-row"><span>Random rule <kbd>R</kbd></span>
                   <div class="beading-action-button" id="buttonRandom">random rule</div>
                 </div>
+                <div class="beading-bar-row"><span>Random output <kbd>r</kbd> <span
+                      class="beading-tooltip tooltip-above"
+                      data-tip="For each rule part shown, randomize the output.">?</span></span>
+                  <div class="beading-action-button" id="buttonRandomize">random</div>
+                </div>
                 <div class="beading-bar-row"><span>Random seed <kbd>0</kbd></span>
                   <div class="beading-action-button" id="buttonRandomSeed">random seed</div>
                 </div>
@@ -223,17 +228,12 @@
               <div class="beading-stuff">
                 <div class="beading-bar-col caution-tape"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
                     id="selectRuleCompression"></select></div>
-                <div class="beading-bar-col"><span>Rule module sorting</span> <select class="beading-select"
+                <div class="beading-bar-col"><span>Rule part sorting</span> <select class="beading-select"
                     id="selectModuleSorting">
-                    <option disabled="disabled" selected="selected">Rule module sorting</option>
+                    <option disabled="disabled" selected="selected">Rule part sorting</option>
                   </select></div>
-                <div class="beading-bar-row" style="display: none;"><span>Fixed rule modules</span><input type="checkbox"
+                <div class="beading-bar-row" style="display: none;"><span>Fixed rule parts</span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxFixedRuleModules"></div>
-                <div class="beading-bar-row"><span>Random output <kbd>r</kbd> <span
-                      class="beading-tooltip tooltip-above"
-                      data-tip="For each rule module shown, randomize the output.">?</span></span>
-                  <div class="beading-action-button" id="buttonRandomize">random</div>
-                </div>
                 <div class="beading-bar-row"><span>Hide inactive parts <kbd>i</kbd></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxMarkInactive"></div>
                 <div class="beading-bar-row"><span>Shows counters <kbd>.</kbd></span><input type="checkbox"
@@ -242,7 +242,7 @@
                   <div><span>Shows percentages <kbd>,</kbd></span><input type="checkbox"
                       class="checkbox checkbox-secondary" id="checkboxShowPercentage"></div>
                 </div>
-                <div class="beading-bar-row"><span>Expand rule module <kbd>spc</kbd></span>
+                <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
                   <div class="beading-action-button" id="expandRule">expand</div>
                 </div>
               </div>
@@ -486,7 +486,7 @@
                 </tr>
                 <tr>
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>space</kbd></td>
-                  <td>Expand rule module</td>
+                  <td>Expand rule part</td>
                 </tr>
                 <tr>
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>→</kbd></td>

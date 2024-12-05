@@ -986,7 +986,7 @@ let visualStyles = [
   [4, "scales", "Scales"],
   [5, "diamonds", "Diamonds"],
   [6, "realistic", "Realistic"],
-  [7, "apples", "Apple cores"],
+  // [7, "apples", "Apple cores"],
 ];
 let noVisualStyles = visualStyles.length;
 function getVisualStyleNumber(n) {
@@ -1111,12 +1111,12 @@ function getModuleSortingLongString(n) {
 }
 let ruleCompressions = [
   [0, "none", "None"],
+  [3, "onlymultiset", "Only Multiset Compression"],
   [1, "onlywildcard", "Only Wildcard Compression"],
   [2, "onlyone", "Only One Compression"],
-  [3, "onlymultiset", "Only Multiset Compression"],
   [4, "onlyfullmultiset", "Only Full Multiset Compression"],
-  [5, "onlytotalistic", "Only Totalistic Compression"],
-  [6, "findsame", "Find-Same Compression"],
+  // [5, "onlytotalistic", "Only Totalistic Compression"],
+  // [6, "findsame", "Find-Same Compression"],
   [7, "max", "Maximal Compression"],
 ];
 function getRuleCompressionNumber(n) {
