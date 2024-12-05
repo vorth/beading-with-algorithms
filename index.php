@@ -227,7 +227,7 @@
                     id="selectModuleSorting">
                     <option disabled="disabled" selected="selected">Rule module sorting</option>
                   </select></div>
-                <div class="beading-bar-row"><span>Fixed rule modules</span><input type="checkbox"
+                <div class="beading-bar-row" style="display: none;"><span>Fixed rule modules</span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxFixedRuleModules"></div>
                 <div class="beading-bar-row"><span>Random output <kbd>r</kbd> <span
                       class="beading-tooltip tooltip-above"
