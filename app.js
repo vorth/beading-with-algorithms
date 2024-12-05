@@ -1060,11 +1060,11 @@ function nextMainLayout() {
   let nextLayout = getMainLayoutLongString(nextNumber);
   return nextLayout;
 }
-let startShapes = [[0, "normal", "Normal"], [1, "acuteleft", "Acute left"], [
+let startShapes = [[0, "normal", "Normal"], [
   2,
   "acuteright",
   "Acute right",
-], [3, "obtuse", "Obtuse middle"]];
+]];
 function getStartShapeNumber(n) {
   for (let s of startShapes) {
     if (s[0] == n || s[1] == n || s[2] == n) return s[0];
