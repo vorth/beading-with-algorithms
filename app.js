@@ -6122,7 +6122,7 @@ class RuleModule {
     let bH = cH * .95;
     let hOff = (this.h - cH * 2) / 2;
     let wOff = (this.w - cW * 3) / 2;
-    let leftX = this.x + wOff + .5 * cW +
+    let leftX = this.x + wOff + .3 * cW +
       (this.moduleType === "totalistic" ? -.5 * cW : 0);
     let leftY = this.y + hOff + .5 * cH +
       (this.moduleType === "totalistic" ? -.25 * cH : 0);
@@ -6130,13 +6130,13 @@ class RuleModule {
       (this.moduleType === "totalistic" ? -.5 * cW : 0);
     let aboveY = this.y + hOff + .5 * cH +
       (this.moduleType === "totalistic" ? -.25 * cH : 0);
-    let rightX = this.x + wOff + 2.5 * cW +
+    let rightX = this.x + wOff + 2.7 * cW +
       (this.moduleType === "totalistic" ? -.5 * cW : 0);
     let rightY = this.y + hOff + .5 * cH +
       (this.moduleType === "totalistic" ? -.25 * cH : 0);
     let nextX = this.x + wOff + 1.5 * cW +
       (this.moduleType === "totalistic" ? -.5 * cW : 0);
-    let nextY = this.y + hOff + 1.5 * cH +
+    let nextY = this.y + hOff + 1.8 * cH +
       (this.moduleType === "totalistic" ? +.25 * cH : 0);
     if (showBoundingBox) {
       noFill();
@@ -6323,12 +6323,12 @@ class RuleModule {
     setColor(this.next, 0, 0);
     if (showRuleModuleBorder || brightness(currentFill) > 250) {
       stroke(128);
-      strokeWeight(cW * borderWidth * .005);
+      strokeWeight(cW * borderWidth * .03);
     } else {
       stroke(currentFill);
-      strokeWeight(cW * .003);
+      strokeWeight(cW * .01);
     }
-    rulebead(nextX, nextY, bW, bH, bW * .3);
+    rulebead(nextX, nextY, bW*1.2, bH*1.2, bW * .3);
     textWithAdjustedColor(this.next, nextX, nextY, bH);
     let count = 0;
     let componentCount = 0;
