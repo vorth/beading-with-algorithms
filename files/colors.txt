@@ -1,0 +1,24 @@
+0:Grey:c0f=#000000&c1f=#ffffff&c2f=#a6a6a6&c3f=#595959&c4f=#b3b3b3&c5f=#404040&c0t=#1a1a1a&c1t=#e6e6e6&c2t=#8c8c8c&c3t=#737373&c4t=#d9d9d9&c5t=#262626
+1:Candy:c0f=#ffffff&c1f=#f55db1&c2f=#000000&c3f=#7514f5&c4f=#d9f714&c5f=#f76014&c0t=#4d4d4d&c1t=#b3b3b3&c2t=#941f5f&c3t=#0cc1f7&c4t=#63f70c&c5t=#f7bb14
+2:Easy:c0f=#0a0a66&c1f=#bfd9bf&c2f=#ede67b&c3f=#f76014&c4f=#000000&c5f=#ffffff&c0t=#2121d9&c1t=#74a352&c2t=#fac000&c3t=#800d0d&c4t=#4d4d4d&c5t=#b3b3b3
+3:New Gold:c0f=#000000&c1f=#ddb881&c2f=#7861a6&c3f=#3d7272&c4f=#f4f4f4&c5f=#a9ed87&c0t=#211f26&c1t=#dcbd9b&c2t=#c9bdef&c3t=#493894&c4t=#9e9d9f&c5t=#569667
+4:Floral:c0f=#8c1f62&c1f=#b8c200&c2f=#ffffff&c3f=#b7cfb0&c4f=#000000&c5f=#e88f00&c0t=#ed6ba8&c1t=#527500&c2t=#ffc929&c3t=#6da191&c4t=#4d4d4d&c5t=#e85900
+5:Metallic:c0f=#000000&c1f=#cca437&c2f=#5881a3&c3f=#824434&c4f=#cccccc&c5f=#899e33&c0t=#6a47de&c1t=#9e562c&c2t=#ffffff&c3t=#d48e7d&c4t=#808080&c5t=#6b5522
+6:Patriotic:c0f=#bf2626&c1f=#ffffff&c2f=#2451b3&c3f=#cca437&c4f=#379110&c5f=#000000&c0t=#660000&c1t=#aba296&c2t=#000080&c3t=#996929&c4t=#7cc95b&c5t=#4d4d4d
+7:Mucha:c0f=#ffc735&c1f=#000000&c2f=#ad88c9&c3f=#ff6666&c4f=#ffb3b3&c5f=#4d4d4d&c0t=#ff0004&c1t=#000000&c2t=#ffffff&c3t=#ff6669&c4t=#ffb3b4&c5t=#999999
+8:Grass:c0f=#5d8b48&c1f=#f0f1f4&c2f=#abc966&c3f=#9580ff&c4f=#000000&c5f=#a9ed87&c0t=#405d42&c1t=#eff8f6&c2t=#9fc984&c3t=#a6f0ff&c4t=#666666&c5t=#569667
+9:Earth:c0f=#a19c89&c1f=#614914&c2f=#000000&c3f=#631f0c&c4f=#666666&c5f=#79ad97&c0t=#ffffff&c1t=#55802d&c2t=#263f75&c3t=#634138&c4t=#333333&c5t=#acde83
+10:Happy:c0f=#4d4d4d&c1f=#d982a9&c2f=#ffe138&c3f=#389cff&c4f=#ffffff&c5f=#cccccc&c0t=#000000&c1t=#d9c3cd&c2t=#ffa538&c3t=#2dcca7&c4t=#808080&c5t=#000000
+11:Sharp:c0f=#ff0000&c1f=#000000&c2f=#ffffff&c3f=#ff6666&c4f=#ffb3b3&c5f=#4d4d4d&c0t=#ff0004&c1t=#000000&c2t=#ffffff&c3t=#ff6669&c4t=#ffb3b4&c5t=#999999
+12:Gold:c0f=#d4af66&c1f=#285b7a&c2f=#e186ae&c3f=#000000&c4f=#6b30d9&c5f=#43e5e8&c0t=#edde6b&c1t=#4e9dba&c2t=#ee677a&c3t=#4d4d4d&c4t=#b294eb&c5t=#23b096
+//13:Water:c0f=#196473&c1f=#ffffff&c2f=#80ffd4&c3f=#9580ff&c4f=#000000&c5f=#a9ed87&c0t=#30bdd9&c1t=#f4ff94&c2t=#a8ffb7&c3t=#a6f0ff&c4t=#666666&c5t=#569667
+13:New water:c0f=#000000&c1f=#cccccc&c2f=#00a89f&c3f=#595959&c4f=#b3b3b3&c5f=#404040&c0t=#3f3f3f&c1t=#f2f2f2&c2t=#afa145&c3t=#737373&c4t=#d9d9d9&c5t=#262626&
+14:New Mellow:c0f=#f2efd1&c1f=#341826&c2f=#5b7490&c3f=#b0b176&c4f=#000000&c5f=#ffffff&c0t=#f2efd4&c1t=#3f3c3e&c2t=#8f6b95&c3t=#88b16a&c4t=#4d4d4d&c5t=#b3b3b3
+15:Lilac:c0f=#000000&c1f=#ffffff&c2f=#77318f&c3f=#595959&c4f=#b3b3b3&c5f=#404040&c0t=#1a1a1a&c1t=#e6e6e6&c2t=#d9a1e2&c3t=#737373&c4t=#d9d9d9&c5t=#262626
+16:Kintsugi:c0f=#a3bcf6&c1f=#c45425&c2f=#000000&c3f=#e9d58b&c4f=#000000&c5f=#a9ed87&c0t=#97ade1&c1t=#f2d765&c2t=#231f27&c3t=#ead98e&c4t=#666666&c5t=#56966
+17:Dark Lilac:c0f=#000000&c1f=#ffffff&c2f=#d9a1e2&c3f=#595959&c4f=#b3b3b3&c5f=#404040&c0t=#1a1a1a&c1t=#e6e6e6&c2t=#77318f&c3t=#737373&c4t=#d9d9d9&c5t=#262626
+18:Copper:c0f=#d6d6d6&c1f=#d27a4f&c2f=#000000&c3f=#ffffff&c4f=#00c2ab&c5f=#6bad00&c0t=#a9a9a9&c1t=#fbf5a4&c2t=#3e3e3e&c3t=#b3b3b3&c4t=#0078c2&c5t=#d9f714
+19:Red Theme 3:c0f=#ffffff&c1f=#8c3728&c2f=#000000&c3f=#ff6666&c4f=#ffb3b3&c5f=#4d4d4d&c0t=#fffefe&c1t=#ad7c9a&c2t=#000000&c3t=#ff6669&c4t=#ffb3b4&c5t=#999999
+20:Bosch:c0f=#cccccd&c1f=#4ba59f&c2f=#000000&c3f=#9aebed&c4f=#f48af0&c5f=#a9ed87&c0t=#f2f2f2&c1t=#ada153&c2t=#3e3e3e&c3t=#493894&c4t=#aa3288&c5t=#569667
+21:Dusk:c0f=#c38cc5&c1f=#ebeaf0&c2f=#696869&c3f=#389cff&c4f=#ffffff&c5f=#cccccc&c0t=#87489a&c1t=#b4d1cc&c2t=#000000&c3t=#2dcca7&c4t=#808080&c5t=#000000
+22:Old Mellow:c0f=#f3efce&c1f=#381726&c2f=#537592&c3f=#9580ff&c4f=#000000&c5f=#a9ed87&c0t=#30bdd9&c1t=#f4ff94&c2t=#a8ffb7&c3t=#a6f0ff&c4t=#666666&c5t=#569667
