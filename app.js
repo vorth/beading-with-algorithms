@@ -6067,34 +6067,34 @@ class RuleModule {
     ) {
       if (vverbose) console.log("    inside!");
       if (vverbose) console.log(this);
-      if (mobile) {
+      // if (mobile) {
         this.incrementNext();
         currentPattern.setArrayRuleFromRuleModules();
         startArrayRule = currentPattern.arrayRule;
         draw();
-      } else {if (this.active === false) this.active = true;
-        else this.active = false;}
+      // } else {if (this.active === false) this.active = true;
+      //   else this.active = false;}
       return true;
     }
   }
   dealWithMouseWheeled(mx, my, e) {
-    if (vverbose) {
-      console.log(
-        "dealWithMouseWheeled (in RuleModule)" +
-          (pressedKey(SHIFT) ? " with SHIFT key" : ""),
-      );
-    }
-    if (
-      this.x <= mx && mx <= this.x + this.w && this.y <= my &&
-      my <= this.y + this.h
-    ) {
-      if (vverbose) console.log("    inside!");
-      if (vverbose) console.log(this);
-      if (e.deltaY < 0) this.decrementNext();
-      else this.incrementNext();
-      currentPattern.setArrayRuleFromRuleModules();
-      return true;
-    }
+    // if (vverbose) {
+    //   console.log(
+    //     "dealWithMouseWheeled (in RuleModule)" +
+    //       (pressedKey(SHIFT) ? " with SHIFT key" : ""),
+    //   );
+    // }
+    // if (
+    //   this.x <= mx && mx <= this.x + this.w && this.y <= my &&
+    //   my <= this.y + this.h
+    // ) {
+    //   if (vverbose) console.log("    inside!");
+    //   if (vverbose) console.log(this);
+    //   if (e.deltaY < 0) this.decrementNext();
+    //   else this.incrementNext();
+    //   currentPattern.setArrayRuleFromRuleModules();
+    //   return true;
+    // }
   }
   show() {
     if (vvverbose) console.log("Showing rule module.");
