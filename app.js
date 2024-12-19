@@ -256,8 +256,14 @@ function refreshPatternsAndDraw() {
   if (ready) draw();
   if (vverbose) console.log("  => end refreshPatternsAndDraw()");
 }
+
+const gridSettingsPanel = document .getElementById( "grid-settings-panel" );
+
 function initializePatternsAndDraw() {
   if (vverbose) console.log("initializePatternsAndDraw() start:");
+
+  gridSettingsPanel.classList .toggle( "caution-tape", colors > 3 );
+
   patterns = [];
   if (comparisonLayout === "two" || comparisonLayout === "three") {
     patterns.push(currentPattern);
@@ -835,7 +841,7 @@ let showPercentages = !true;
 let columns, rows, colors;
 let neighbors = 3;
 let minColor = 2;
-let maxColor = 6;
+let maxColor = 5;
 let seedType;
 let seedPeriod = 6;
 let periodLimit = 3;
@@ -2713,7 +2719,7 @@ function toggleSliderSeedPeriod() {
 }
 function toggleClearErrors() {
   resetToggles();
-  draw();
+  refreshPatternsAndDraw();
 }
 function toggleThread() {
   showThread = !showThread;
@@ -3184,12 +3190,12 @@ function keyPressed() {
     if (vverbose) console.log("Toggling grid layout.");
     toggleGridLayout();
     setCheckboxValue(checkboxGridLayout, gridLayout);
-  } else if (key === "=") {
-    if (verbose) console.log("=");
-    if (comparisonLayout === "two") comparisonLayout = "three";
-    else if (comparisonLayout === "three") comparisonLayout = false;
-    else comparisonLayout = "two";
-    initializePatternsAndDraw();
+  // } else if (key === "=") {
+  //   if (verbose) console.log("=");
+  //   if (comparisonLayout === "two") comparisonLayout = "three";
+  //   else if (comparisonLayout === "three") comparisonLayout = false;
+  //   else comparisonLayout = "two";
+  //   initializePatternsAndDraw();
   } else if (key == "c") increaseColors();
   else if (key == "C") decreaseColors();
   else if (key == "b") {
@@ -3352,14 +3358,14 @@ function keyPressed() {
   } else if (key == ",") {
     toggleShowPercentages();
     setCheckboxValue(checkboxShowPercentage, showPercentages);
-  } else if (key == "+") {
-    analysisThreshold++;
-    currentPattern.analyzeArrayRule();
-    draw();
-  } else if (key == "-") {
-    analysisThreshold = max(analysisThreshold - 1, 1);
-    currentPattern.analyzeArrayRule();
-    draw();
+  // } else if (key == "+") {
+  //   analysisThreshold++;
+  //   currentPattern.analyzeArrayRule();
+  //   draw();
+  // } else if (key == "-") {
+  //   analysisThreshold = max(analysisThreshold - 1, 1);
+  //   currentPattern.analyzeArrayRule();
+  //   draw();
   } else if (key == "z") screenshotDirect();
   else if (key == "Z") screenshotAllLayouts();
   else if (isNumeric(keyCode)) {
