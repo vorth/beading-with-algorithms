@@ -841,7 +841,7 @@ let showPercentages = !true;
 let columns, rows, colors;
 let neighbors = 3;
 let minColor = 2;
-let maxColor = 5;
+let maxColor = 6;
 let seedType;
 let seedPeriod = 6;
 let periodLimit = 3;
@@ -3047,7 +3047,10 @@ function keyPressed() {
     if (0 <= num && num < maxColor && colors < maxColor) {
       increaseColors(parseInt(key));
     }
-  } else if (pressedChar("J")) {
+  } else if ( key == "6" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    setColors( 6 );
+  }
+  else if (pressedChar("J")) {
     if (key == "1" || key == "2" || key == "3" || key == "4") {
       if (key == "1") {
         for (let module of currentPattern.ruleModules) {
@@ -3196,7 +3199,7 @@ function keyPressed() {
   //   else if (comparisonLayout === "three") comparisonLayout = false;
   //   else comparisonLayout = "two";
   //   initializePatternsAndDraw();
-  } else if (key == "c") increaseColors();
+  } else if ( key == "c" && colors < 5 ) increaseColors();
   else if (key == "C") decreaseColors();
   else if (key == "b") {
     toggleShowBorder();
