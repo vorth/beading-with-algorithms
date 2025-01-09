@@ -111,11 +111,17 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Basic</div>
               <div class="beading-stuff">
-                <div class="beading-bar-row"><span>Colors <kbd>c/C</kbd></span> <span
-                    class="flex items-center gap-2"><span class="inline-flex gap-1"><input type="radio"
-                        class="radio radio-secondary" data-colors="2" name="radioColors">2</span> <span
-                      class="inline-flex gap-1"><input type="radio" class="radio radio-secondary" data-colors="3"
-                        name="radioColors">3</span></span></div>
+                <div class="beading-bar-row">
+                  <span>Colors <kbd>c/C</kbd></span>
+                  <span class="flex items-center gap-2">
+                    <span class="inline-flex gap-1">
+                      <input type="radio" class="radio radio-secondary" data-colors="2" name="radioColors">2</span>
+                    <span class="inline-flex gap-1">
+                      <input type="radio" class="radio radio-secondary" data-colors="3" name="radioColors">3</span>
+                    <span class="inline-flex gap-1">
+                      <input type="radio" class="radio radio-secondary" data-colors="4" name="radioColors">4</span>
+                  </span>
+                </div>
                 <div class="beading-bar-col">
                   <div class="flex justify-between"><span>Number of columns</span> <span id="columnsValue"></span></div>
                   <input type="range" min="4" max="128" value="8" step="2" class="range range-secondary range-xs"
@@ -307,16 +313,16 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Advanced</div>
               <div class="beading-stuff">
-                <div class="beading-bar-row caution-tape">
+                <!-- <div class="beading-bar-row caution-tape">
                   <span>Colors <kbd>c/C</kbd></span> <span
                     class="flex items-center gap-2">
                   <span class="inline-flex gap-1"><input type="radio"
                         class="radio radio-secondary" data-colors="4" name="radioColors">4</span>
                   <span class="inline-flex gap-1"><input type="radio" class="radio radio-secondary" data-colors="5"
                         name="radioColors">5</span>
-                  <!-- <span class="inline-flex gap-1"><input type="radio"
-                        class="radio radio-secondary" data-colors="6" name="radioColors">6</span></span> -->
-                </div>
+                  <span class="inline-flex gap-1"><input type="radio"
+                        class="radio radio-secondary" data-colors="6" name="radioColors">6</span></span>
+                </div> -->
                 <div class="beading-bar-row"><span>Clear toggles <kbd>e</kbd></span>
                   <div class="beading-action-button" id="buttonClearToggles">clear</div>
                 </div>
