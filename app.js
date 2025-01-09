@@ -2219,9 +2219,9 @@ function initalizeGui() {
   checkboxShowPercentage.changed(toggleShowPercentages);
   showPercentageDiv = select("#showPercentageDiv");
   buttonRuleExpand = select("#expandRule");
-  buttonRuleExpand.elt.addEventListener("click", (e) => {
-    toggleRuleExpand();
-  });
+  // buttonRuleExpand.elt.addEventListener("click", (e) => {
+  //   toggleRuleExpand();
+  // });
   checkboxGridLayout = select("#checkboxGridLayout");
   checkboxGridLayout.changed(toggleGridLayout);
   gridLayoutDiv = select("#gridLayoutDiv");

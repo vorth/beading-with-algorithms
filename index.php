@@ -242,9 +242,9 @@
                   <div><span>Shows percentages <kbd>,</kbd></span><input type="checkbox"
                       class="checkbox checkbox-secondary" id="checkboxShowPercentage"></div>
                 </div>
-                <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
+                <!-- <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
                   <div class="beading-action-button" id="expandRule">expand</div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="beading-panel" id="grid-settings-panel">
