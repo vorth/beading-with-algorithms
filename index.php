@@ -226,7 +226,7 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Rules</div>
               <div class="beading-stuff">
-                <div class="beading-bar-col"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
+                <div class="beading-bar-col caution-tape"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
                     id="selectRuleCompression"></select></div>
                 <div class="beading-bar-col"><span>Rule part sorting</span> <select class="beading-select"
                     id="selectModuleSorting">
