@@ -1117,13 +1117,13 @@ function getModuleSortingLongString(n) {
 }
 let ruleCompressions = [
   [0, "none", "None"],
-  [3, "onlymultiset", "Only Multiset Compression"],
-  [1, "onlywildcard", "Only Wildcard Compression"],
-  [2, "onlyone", "Only One Compression"],
-  [4, "onlyfullmultiset", "Only Full Multiset Compression"],
-  // [5, "onlytotalistic", "Only Totalistic Compression"],
-  // [6, "findsame", "Find-Same Compression"],
-  [7, "max", "Maximal Compression"],
+  [3, "onlymultiset", "Only Multiset"],
+  [1, "onlywildcard", "Only Wildcard"],
+  [2, "onlyone", "Only One"],
+  [4, "onlyfullmultiset", "Only Full Multiset"],
+  // [5, "onlytotalistic", "Only Totalistic"],
+  // [6, "findsame", "Find-Same"],
+  [7, "max", "Maximal"],
 ];
 function getRuleCompressionNumber(n) {
   for (let s of ruleCompressions) {
