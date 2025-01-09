@@ -841,7 +841,7 @@ let showPercentages = !true;
 let columns, rows, colors;
 let neighbors = 3;
 let minColor = 2;
-let maxColor = 6;
+let maxColor = 4;
 let seedType;
 let seedPeriod = 6;
 let periodLimit = 3;
@@ -3047,9 +3047,11 @@ function keyPressed() {
     if (0 <= num && num < maxColor && colors < maxColor) {
       increaseColors(parseInt(key));
     }
-  } else if ( key == "5" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+  } else if ( pressedChar("5") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '5 colors' );
     setColors( 5 );
-  } else if ( key == "6" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+  } else if ( pressedChar("6") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '6 colors' );
     setColors( 6 );
   }
   else if (pressedChar("J")) {
