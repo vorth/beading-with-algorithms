@@ -242,12 +242,12 @@
                   <div><span>Shows percentages <kbd>,</kbd></span><input type="checkbox"
                       class="checkbox checkbox-secondary" id="checkboxShowPercentage"></div>
                 </div>
-                <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
+                <!-- <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
                   <div class="beading-action-button" id="expandRule">expand</div>
-                </div>
+                </div> -->
               </div>
             </div>
-            <div class="beading-panel">
+            <div class="beading-panel" id="grid-settings-panel">
               <div class="rantonse-button beading-button closed">Grid</div>
               <div class="beading-stuff">
                 <div class="beading-bar-row"><span>Grid layout <kbd>g</kbd></span><input type="checkbox"
@@ -565,10 +565,10 @@
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>PageUp</kbd></td>
                   <td>Previous pre-defined rule</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>=</kbd></td>
                   <td>Toggles comparison mode</td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>z</kbd></td>
                   <td>Take a screenshot</td>
@@ -585,10 +585,10 @@
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>q</kbd></td>
                   <td>Shows debug boxes</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td class="w-[100px] text-center mr-12 font-bold"><kbd>+/-</kbd></td>
                   <td>Changes analysis threshold</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>

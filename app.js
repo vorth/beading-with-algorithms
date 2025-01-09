@@ -256,8 +256,14 @@ function refreshPatternsAndDraw() {
   if (ready) draw();
   if (vverbose) console.log("  => end refreshPatternsAndDraw()");
 }
+
+const gridSettingsPanel = document .getElementById( "grid-settings-panel" );
+
 function initializePatternsAndDraw() {
   if (vverbose) console.log("initializePatternsAndDraw() start:");
+
+  gridSettingsPanel.classList .toggle( "caution-tape", colors > 3 );
+
   patterns = [];
   if (comparisonLayout === "two" || comparisonLayout === "three") {
     patterns.push(currentPattern);
@@ -1088,7 +1094,7 @@ let moduleSortings = [
   [1, "multiset", "Multiset priority"],
   [2, "compression", "Compression priority"],
   [3, "totalistic", "Total value priority"],
-  [4, "majoritycount", "Majority color count priority"],
+  // [4, "majoritycount", "Majority color count priority"],
   [5, "output", "Output"],
 ];
 function getModuleSortingNumber(n) {
@@ -1111,13 +1117,13 @@ function getModuleSortingLongString(n) {
 }
 let ruleCompressions = [
   [0, "none", "None"],
-  [3, "onlymultiset", "Only Multiset Compression"],
-  [1, "onlywildcard", "Only Wildcard Compression"],
-  [2, "onlyone", "Only One Compression"],
-  [4, "onlyfullmultiset", "Only Full Multiset Compression"],
-  // [5, "onlytotalistic", "Only Totalistic Compression"],
-  // [6, "findsame", "Find-Same Compression"],
-  [7, "max", "Maximal Compression"],
+  [3, "onlymultiset", "Only Multiset"],
+  [1, "onlywildcard", "Only Wildcard"],
+  [2, "onlyone", "Only One"],
+  [4, "onlyfullmultiset", "Only Full Multiset"],
+  // [5, "onlytotalistic", "Only Totalistic"],
+  // [6, "findsame", "Find-Same"],
+  [7, "max", "Maximal"],
 ];
 function getRuleCompressionNumber(n) {
   for (let s of ruleCompressions) {
@@ -2213,9 +2219,9 @@ function initalizeGui() {
   checkboxShowPercentage.changed(toggleShowPercentages);
   showPercentageDiv = select("#showPercentageDiv");
   buttonRuleExpand = select("#expandRule");
-  buttonRuleExpand.elt.addEventListener("click", (e) => {
-    toggleRuleExpand();
-  });
+  // buttonRuleExpand.elt.addEventListener("click", (e) => {
+  //   toggleRuleExpand();
+  // });
   checkboxGridLayout = select("#checkboxGridLayout");
   checkboxGridLayout.changed(toggleGridLayout);
   gridLayoutDiv = select("#gridLayoutDiv");
@@ -2713,7 +2719,7 @@ function toggleSliderSeedPeriod() {
 }
 function toggleClearErrors() {
   resetToggles();
-  draw();
+  refreshPatternsAndDraw();
 }
 function toggleThread() {
   showThread = !showThread;
@@ -3041,7 +3047,12 @@ function keyPressed() {
     if (0 <= num && num < maxColor && colors < maxColor) {
       increaseColors(parseInt(key));
     }
-  } else if (pressedChar("J")) {
+  } else if ( key == "5" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    setColors( 5 );
+  } else if ( key == "6" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    setColors( 6 );
+  }
+  else if (pressedChar("J")) {
     if (key == "1" || key == "2" || key == "3" || key == "4") {
       if (key == "1") {
         for (let module of currentPattern.ruleModules) {
@@ -3184,13 +3195,13 @@ function keyPressed() {
     if (vverbose) console.log("Toggling grid layout.");
     toggleGridLayout();
     setCheckboxValue(checkboxGridLayout, gridLayout);
-  } else if (key === "=") {
-    if (verbose) console.log("=");
-    if (comparisonLayout === "two") comparisonLayout = "three";
-    else if (comparisonLayout === "three") comparisonLayout = false;
-    else comparisonLayout = "two";
-    initializePatternsAndDraw();
-  } else if (key == "c") increaseColors();
+  // } else if (key === "=") {
+  //   if (verbose) console.log("=");
+  //   if (comparisonLayout === "two") comparisonLayout = "three";
+  //   else if (comparisonLayout === "three") comparisonLayout = false;
+  //   else comparisonLayout = "two";
+  //   initializePatternsAndDraw();
+  } else if ( key == "c" && colors < 5 ) increaseColors();
   else if (key == "C") decreaseColors();
   else if (key == "b") {
     toggleShowBorder();
@@ -3352,14 +3363,14 @@ function keyPressed() {
   } else if (key == ",") {
     toggleShowPercentages();
     setCheckboxValue(checkboxShowPercentage, showPercentages);
-  } else if (key == "+") {
-    analysisThreshold++;
-    currentPattern.analyzeArrayRule();
-    draw();
-  } else if (key == "-") {
-    analysisThreshold = max(analysisThreshold - 1, 1);
-    currentPattern.analyzeArrayRule();
-    draw();
+  // } else if (key == "+") {
+  //   analysisThreshold++;
+  //   currentPattern.analyzeArrayRule();
+  //   draw();
+  // } else if (key == "-") {
+  //   analysisThreshold = max(analysisThreshold - 1, 1);
+  //   currentPattern.analyzeArrayRule();
+  //   draw();
   } else if (key == "z") screenshotDirect();
   else if (key == "Z") screenshotAllLayouts();
   else if (isNumeric(keyCode)) {
