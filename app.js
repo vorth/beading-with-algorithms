@@ -1094,7 +1094,7 @@ let moduleSortings = [
   [1, "multiset", "Multiset priority"],
   [2, "compression", "Compression priority"],
   [3, "totalistic", "Total value priority"],
-  [4, "majoritycount", "Majority color count priority"],
+  // [4, "majoritycount", "Majority color count priority"],
   [5, "output", "Output"],
 ];
 function getModuleSortingNumber(n) {
