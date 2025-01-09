@@ -3047,6 +3047,8 @@ function keyPressed() {
     if (0 <= num && num < maxColor && colors < maxColor) {
       increaseColors(parseInt(key));
     }
+  } else if ( key == "5" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    setColors( 5 );
   } else if ( key == "6" && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
     setColors( 6 );
   }
