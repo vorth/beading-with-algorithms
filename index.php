@@ -244,9 +244,11 @@
                     class="checkbox checkbox-secondary" id="checkboxMarkInactive"></div>
                 <div class="beading-bar-row"><span>Shows counters <kbd>.</kbd></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxShowCounters"></div>
-                <div class="pt-1" style="display: none;" id="showPercentageDiv">
-                  <div><span>Shows percentages <kbd>,</kbd></span><input type="checkbox"
-                      class="checkbox checkbox-secondary" id="checkboxShowPercentage"></div>
+                <div class="beading-inner-frame" style="display: none;" id="showPercentageDiv">
+                  <div class="beading-bar-row">
+                    <span>Shows percentages <kbd>,</kbd></span>
+                    <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxShowPercentage">
+                  </div>
                 </div>
                 <!-- <div class="beading-bar-row"><span>Expand rule part <kbd>spc</kbd></span>
                   <div class="beading-action-button" id="expandRule">expand</div>
@@ -613,7 +615,18 @@
         <div class="flex justify-center">
           <div class="max-w-lg p-4 text-center">This is the app accompanying our book <a
               class="italic text-gray-700 font-fun" href="">Beading with Algorithms</a>. With this tool you can explore
-            the world of and algorithms through simple and visually appealing rules.</div>
+            the world of and algorithms through simple and visually appealing rules.
+            Specifically, explore one dimensional cellular automata on regular square grids (i.e., graph paper) and on staggered grids (i.e., beaded peyote stitch).
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="text-center">Software by Roger Antonsen</div>
+        </div>
+        <div class="flex justify-center">
+          <div class="text-center">Concept by Gwen Fisher</div>
+        </div>
+        <div class="flex justify-center">
+          <div class="text-center">Special thanks to Scott Vorthmann</div>
         </div>
         <div class="flex flex-row w-full gap-2 my-2">
           <div><img class="w-full h-auto" src="files/ch1.t.png" alt=""></div>
