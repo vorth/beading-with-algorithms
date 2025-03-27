@@ -841,7 +841,7 @@ let showPercentages = !true;
 let columns, rows, colors;
 let neighbors = 3;
 let minColor = 2;
-let maxColor = 4;
+let maxColor = 6;
 let seedType;
 let seedPeriod = 6;
 let periodLimit = 3;
@@ -3203,7 +3203,7 @@ function keyPressed() {
   //   else if (comparisonLayout === "three") comparisonLayout = false;
   //   else comparisonLayout = "two";
   //   initializePatternsAndDraw();
-  } else if ( key == "c" && colors < 5 ) increaseColors();
+  } else if ( key == "c" && colors < 4 ) increaseColors();
   else if (key == "C") decreaseColors();
   else if (key == "b") {
     toggleShowBorder();
@@ -6368,13 +6368,13 @@ class RuleModule {
         text(
           "" + nf(per, 0, 2) + "%",
           this.x + this.w / 2,
-          this.y + this.h - hOff / 2,
+          this.y + this.h + hOff / 8,
         );
       } else {
         fill(0);
         textAlign(CENTER, CENTER);
         textSize(.5 * bH);
-        text("" + count + "", this.x + this.w / 2, this.y + this.h - hOff / 2);
+        text("" + count + "", this.x + this.w / 2, this.y + this.h + hOff / 8 );
       }
     }
   }
