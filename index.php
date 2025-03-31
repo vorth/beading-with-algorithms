@@ -112,7 +112,7 @@
               <div class="select-none rantonse-button beading-button closed">Basic</div>
               <div class="beading-stuff">
                 <div class="beading-bar-row">
-                  <span>Colors <kbd>c/C</kbd></span>
+                  <span>Colors <!--<kbd>c/C</kbd>--></span>
                   <span class="flex items-center gap-2">
                     <span class="inline-flex gap-1">
                       <input type="radio" class="radio radio-secondary" data-colors="2" name="radioColors">2</span>
@@ -132,10 +132,10 @@
                     type="range" min="4" max="128" value="8" step="2" class="range range-secondary range-xs"
                     id="sliderRowRange">
                 </div>
-                <div class="beading-bar-row"><span>Random rule <kbd>R</kbd></span>
+                <div class="beading-bar-row"><span>Random rule <kbd>Alt</kbd>+<kbd>R</kbd></span>
                   <div class="beading-action-button" id="buttonRandom">random rule</div>
                 </div>
-                <div class="beading-bar-row"><span>Random output <kbd>r</kbd> <span
+                <div class="beading-bar-row"><span>Random output <kbd>Alt</kbd>+<kbd>r</kbd> <span
                       class="beading-tooltip tooltip-above"
                       data-tip="For each rule part shown, randomize the output.">?</span></span>
                   <div class="beading-action-button" id="buttonRandomize">random</div>
@@ -157,7 +157,7 @@
                       id="sliderSeedPeriod">
                   </div>
                 </div>
-                <div class="beading-bar-row"><span>Staggered <kbd>S</kbd> <span class="beading-tooltip tooltip-above"
+                <div class="beading-bar-row"><span>Staggered <!--<kbd>S</kbd>--> <span class="beading-tooltip tooltip-above"
                       data-tip="Staggered means that cells are laid out in a hexagonal, instead of a rectangular, grid.">?</span></span>
                   <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxStaggered"></div>
               </div>
@@ -165,33 +165,33 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Styling</div>
               <div class="beading-stuff">
-                <div class="beading-bar-row"><span>Layout <kbd>t</kbd></span> <select class="beading-select"
+                <div class="beading-bar-row"><span>Layout <!--<kbd>t</kbd>--></span> <select class="beading-select"
                     id="selectMainLayout">
-                    <option disabled="disabled" selected="selected">Layout (t)</option>
+                    <option disabled="disabled" selected="selected">Layout</option>
                   </select></div>
                 <div id="colorSchemeCanvas"></div>
-                <div class="beading-bar-col"><span>Color scheme <kbd>o/O</kbd></span> <select class="beading-select"
+                <div class="beading-bar-col"><span>Color scheme <kbd>Alt</kbd>+<kbd>c/C</kbd></span> <select class="beading-select"
                     id="selectColorScheme">
-                    <option disabled="disabled" selected="selected">Select color scheme (o/O)</option>
+                    <option disabled="disabled" selected="selected">Select color scheme</option>
                   </select></div>
-                <div class="beading-bar-col"><span>Visual style <kbd>v/V</kbd></span> <select class="beading-select"
+                <div class="beading-bar-col"><span>Visual style <!--<kbd>v/V</kbd>--></span> <select class="beading-select"
                     id="selectVisualStyle">
-                    <option disabled="disabled" selected="selected">Select visual style (v/V)</option>
+                    <option disabled="disabled" selected="selected">Select visual style</option>
                   </select></div>
-                <div class="beading-bar-row"><span>Alternating colors <kbd>n</kbd></span><input type="checkbox"
+                <div class="beading-bar-row"><span>Alternating colors <!--<kbd>n</kbd>--></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxAlternatingColors"></div>
                 <div class="beading-inner-frame" style="display: none;" id="sliderModuloDiv">
                   <div class="beading-bar-col">
-                    <div class="flex justify-between"><span>Colors modulo <kbd>y/Y</kbd></span> <span
+                    <div class="flex justify-between"><span>Colors modulo <!--<kbd>y/Y</kbd>--></span> <span
                         id="sliderModuloValue"></span></div><input type="range" min="2" max="100" value="8"
                       class="range range-secondary range-xs" id="sliderModuloRange">
                   </div>
-                  <div class="beading-bar-row"><span>Animate colors <kbd>N</kbd></span> <input type="checkbox"
+                  <div class="beading-bar-row"><span>Animate colors <!--<kbd>N</kbd>--></span> <input type="checkbox"
                       class="checkbox checkbox-secondary" id="checkboxAnimateColors"></div>
                 </div>
-                <div class="beading-bar-row"><span>Show thread <kbd>T</kbd></span> <input type="checkbox"
+                <div class="beading-bar-row"><span>Show thread <!--<kbd>T</kbd>--></span> <input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxThread"></div>
-                <div class="beading-bar-row"><span>Show cell border <kbd>b</kbd></span> <input type="checkbox"
+                <div class="beading-bar-row"><span>Show cell border <!--<kbd>b</kbd>--></span> <input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxShowBorder"></div>
                 <div style="display: none;" id="borderOptions">
                   <div class="beading-inner-frame">
@@ -232,7 +232,7 @@
             <div class="beading-panel">
               <div class="select-none rantonse-button beading-button closed">Rules</div>
               <div class="beading-stuff">
-                <div class="beading-bar-col caution-tape"><span>Rule compression <kbd>m/M</kbd></span> <select class="beading-select"
+                <div class="beading-bar-col caution-tape"><span>Rule compression <!--<kbd>m/M</kbd>--></span> <select class="beading-select"
                     id="selectRuleCompression"></select></div>
                 <div class="beading-bar-col"><span>Rule part sorting</span> <select class="beading-select"
                     id="selectModuleSorting">
@@ -240,13 +240,13 @@
                   </select></div>
                 <div class="beading-bar-row" style="display: none;"><span>Fixed rule parts</span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxFixedRuleModules"></div>
-                <div class="beading-bar-row"><span>Hide inactive parts <kbd>i</kbd></span><input type="checkbox"
+                <div class="beading-bar-row"><span>Hide inactive parts <!--<kbd>i</kbd>--></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxMarkInactive"></div>
-                <div class="beading-bar-row"><span>Shows counters <kbd>.</kbd></span><input type="checkbox"
+                <div class="beading-bar-row"><span>Shows counters <!--<kbd>.</kbd>--></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxShowCounters"></div>
                 <div class="beading-inner-frame" style="display: none;" id="showPercentageDiv">
                   <div class="beading-bar-row">
-                    <span>Shows percentages <kbd>,</kbd></span>
+                    <span>Shows percentages <!--<kbd>,</kbd>--></span>
                     <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxShowPercentage">
                   </div>
                 </div>
@@ -258,7 +258,7 @@
             <div class="beading-panel" id="grid-settings-panel">
               <div class="rantonse-button beading-button closed">Grid</div>
               <div class="beading-stuff">
-                <div class="beading-bar-row"><span>Grid layout <kbd>g</kbd></span><input type="checkbox"
+                <div class="beading-bar-row"><span>Grid layout <!--<kbd>g</kbd>--></span><input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxGridLayout"></div>
                 <div style="display: none;" id="gridLayoutDiv">
                   <div class="flex flex-col gap-2">
@@ -325,30 +325,30 @@
                   <span class="inline-flex gap-1"><input type="radio"
                         class="radio radio-secondary" data-colors="6" name="radioColors">6</span></span>
                 </div> -->
-                <div class="beading-bar-row"><span>Clear toggles <kbd>e</kbd></span>
+                <div class="beading-bar-row"><span>Clear toggles <!--<kbd>e</kbd>--></span>
                   <div class="beading-action-button" id="buttonClearToggles">clear</div>
                 </div>
-                <div class="beading-bar-row"><span>Advance by 2 <kbd>a</kbd>+<kbd>↑</kbd></span>
+                <div class="beading-bar-row"><span>Advance by 2 <!--<kbd>a</kbd>+<kbd>↑</kbd>--></span>
                   <div class="beading-action-button" id="buttonAdvanceByTwo">advance</div>
                 </div>
-                <div class="beading-bar-row"><span>Advance by 20 <kbd>A</kbd>+<kbd>↑</kbd></span>
+                <div class="beading-bar-row"><span>Advance by 20 <!--<kbd>A</kbd>+<kbd>↑</kbd>--></span>
                   <div class="beading-action-button" id="buttonAdvanceByTwenty">advance</div>
                 </div>
-                <div class="beading-bar-row"><span>Extra column L <kbd>(</kbd> <span
+                <div class="beading-bar-row"><span>Extra column L <!--<kbd>(</kbd>--> <span
                       class="beading-tooltip tooltip-above"
                       data-tip="Shows an extra column on the left side, identical to the rightmost column.">?</span></span>
                   <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxShowWrappingColumnLeft"></div>
-                <div class="beading-bar-row"><span>Extra column R <kbd>)</kbd> <span
+                <div class="beading-bar-row"><span>Extra column R <!--<kbd>)</kbd>--> <span
                       class="beading-tooltip tooltip-above"
                       data-tip="Shows an extra column on the right side, identical to the leftmost column.">?</span></span>
                   <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxShowWrappingColumnRight"></div>
-                <div class="beading-bar-row"><span>Show period <kbd>p</kbd></span> <input type="checkbox"
+                <div class="beading-bar-row"><span>Show period <!--<kbd>p</kbd>--></span> <input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxShowPeriod"></div>
-                <div class="beading-bar-row"><span>Directional rules <kbd>I</kbd> <span
+                <div class="beading-bar-row"><span>Directional rules <!--<kbd>I</kbd>--> <span
                       class="beading-tooltip tooltip-above"
                       data-tip="When directional rules are on, the next cell is determined from a neighborhood by also taking into account the direction of an imaginary needle, which switches direction for every row.">?</span></span>
                   <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxDirectional"></div>
-                <div class="beading-bar-row"><span>Wrapping <kbd>w</kbd> <span class="beading-tooltip tooltip-above"
+                <div class="beading-bar-row"><span>Wrapping <!--<kbd>w</kbd>--> <span class="beading-tooltip tooltip-above"
                       data-tip="When wrapping is on, the left and the right side of the pattern is connected, as if the sides were wrapped around a torus.">?</span></span>
                   <input type="checkbox" class="checkbox checkbox-secondary" id="checkboxWrapping"></div>
                 <div class="beading-bar-col"><span>Start shape <span class="beading-tooltip tooltip-above"
@@ -358,7 +358,7 @@
                   </select></div>
                 <div class="beading-bar-row"><span>Show direction arrow</span> <input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxArrow"></div>
-                <div class="beading-bar-row"><span>Upwards <kbd>u</kbd></span> <input type="checkbox"
+                <div class="beading-bar-row"><span>Upwards <!--<kbd>u</kbd>--></span> <input type="checkbox"
                     class="checkbox checkbox-secondary" id="checkboxUpwards"></div>
               </div>
             </div>
@@ -397,7 +397,7 @@
       </div>
     </label> <input type="checkbox" id="modalKeyboardShortcuts" class="modal-toggle"> <label
       for="modalKeyboardShortcuts" class="modal">
-      <div class="max-w-6xl modal-box no-scrollbar">
+      <div class="modal-box no-scrollbar">
         <div for="modalKeyboardShortcuts" class="closeme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 24 24"
             width="24" fill="currentColor">
             <path
@@ -406,33 +406,17 @@
           </svg></div>
         <div class="w-full mb-2 text-2xl font-bold text-center">Keyboard shortcuts</div>
         <div class="flex flex-col md:flex-row md:gap-4">
-          <div class="md:w-1/2">
+          <div class="md:w-full">
             <div class="mt-2 font-bold text-center text-red-700 border-b">Basic</div>
             <table class="w-full table-sm shadow-red-500">
               <tbody>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>c/C</kbd></td>
-                  <td>Increases/decreases number of colors</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>d/D + ←↑↓→</kbd></td>
-                  <td>Changes size by 2/20</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>d + 0–9</kbd></td>
-                  <td>Changes to predefined size</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>R</kbd></td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>R</kbd></td>
                   <td>Selects a random rule</td>
                 </tr>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>0–9</kbd></td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>0–9</kbd></td>
                   <td>Changes seed type</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>S</kbd></td>
-                  <td>Toggles staggered</td>
                 </tr>
               </tbody>
             </table>
@@ -440,117 +424,12 @@
             <table class="w-full table-sm shadow-red-500">
               <tbody>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>t</kbd></td>
-                  <td>Changes screen layout</td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>C</kbd></td>
+                  <td>Next color scheme</td>
                 </tr>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>o/O</kbd></td>
-                  <td>Changes color scheme</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>v/V</kbd></td>
-                  <td>Changes visual style</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>n</kbd></td>
-                  <td>Toggles alternating colors</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>y/Y</kbd></td>
-                  <td>Changes color modulus value</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>N</kbd></td>
-                  <td>Animate colors</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>T</kbd></td>
-                  <td>Toggles a beading thread</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>b</kbd></td>
-                  <td>Toggles borders around cells</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Rules</div>
-            <table class="w-full table-sm shadow-red-500">
-              <tbody>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>m/M</kbd></td>
-                  <td>Changes rule compression</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>i</kbd></td>
-                  <td>Toggles inactive parts</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>.</kbd></td>
-                  <td>Toggles counters</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>,</kbd></td>
-                  <td>Toggles percentages</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>space</kbd></td>
-                  <td>Expand rule part</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>→</kbd></td>
-                  <td>Next rule (lexicographically)</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>←</kbd></td>
-                  <td>Previous rule (lexicographically)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="md:w-1/2">
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Grid</div>
-            <table class="w-full table-sm shadow-red-500">
-              <tbody>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>g</kbd></td>
-                  <td>Toggles grid</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Advanced</div>
-            <table class="w-full table-sm shadow-red-500">
-              <tbody>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>a+↑</kbd></td>
-                  <td>Advances pattern by 2 rows</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>a+↑</kbd></td>
-                  <td>Advances pattern by 20 rows</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>(</kbd></td>
-                  <td>Toggles extra column on left side</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>)</kbd></td>
-                  <td>Toggles extra column on right side</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>p</kbd></td>
-                  <td>Toggle period indicator</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>I</kbd></td>
-                  <td>Toggles directional rules</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>w</kbd></td>
-                  <td>Toggles left/right wrapping</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>u</kbd></td>
-                  <td>Toggles upwards/downwards direction</td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
+                  <td>Previous color scheme</td>
                 </tr>
               </tbody>
             </table>
@@ -558,45 +437,13 @@
             <table class="w-full table-sm shadow-red-500">
               <tbody>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>Enter</kbd></td>
-                  <td>Open short code input box</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>X</kbd></td>
-                  <td>Reset everything</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>PageDown</kbd></td>
-                  <td>Next pre-defined rule</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>PageUp</kbd></td>
-                  <td>Previous pre-defined rule</td>
-                </tr>
-                <!-- <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>=</kbd></td>
-                  <td>Toggles comparison mode</td>
-                </tr> -->
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>z</kbd></td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>S</kbd></td>
                   <td>Take a screenshot</td>
                 </tr>
                 <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>Z</kbd></td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td>
                   <td>Take predefined large screenshots</td>
                 </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>P</kbd></td>
-                  <td>Changes map of colors</td>
-                </tr>
-                <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>q</kbd></td>
-                  <td>Shows debug boxes</td>
-                </tr>
-                <!-- <tr>
-                  <td class="w-[100px] text-center mr-12 font-bold"><kbd>+/-</kbd></td>
-                  <td>Changes analysis threshold</td>
-                </tr> -->
               </tbody>
             </table>
           </div>

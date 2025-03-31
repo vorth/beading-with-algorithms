@@ -1,5 +1,5 @@
 "use strict";
-const verbose = !true;
+const verbose = true;
 const vverbose = !true;
 const vvverbose = !true;
 let mobile;
@@ -3011,6 +3011,9 @@ function pressedArrow() {
   return keyCode == LEFT_ARROW || keyCode == RIGHT_ARROW ||
     keyCode == UP_ARROW || keyCode == DOWN_ARROW;
 }
+function pressedAltKey() {
+  return pressedKey(ALT) || pressedKey(OPTION);
+}
 function pressedMetaKey() {
   return pressedKey(CONTROL) || pressedKey(ALT) || pressedKey(OPTION) ||
     pressedKey(224);
@@ -3021,7 +3024,10 @@ function pressedChar(c) {
 function keyReleased() {
   flags[keyCode] = false;
 }
-function keyPressed() {
+
+
+function keyPressed()
+{
   flags[keyCode] = true;
   if (verbose) {
     console.log(
@@ -3042,421 +3048,41 @@ function keyPressed() {
       inputShortCode.elt.focus();
     }}
   if (key == "Meta") return;
-  if (pressedChar("L")) {
-    let num = parseInt(key);
-    if (0 <= num && num < maxColor && colors < maxColor) {
-      increaseColors(parseInt(key));
-    }
-  } else if ( pressedChar("5") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
-    console.log( '5 colors' );
-    setColors( 5 );
-  } else if ( pressedChar("6") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
-    console.log( '6 colors' );
-    setColors( 6 );
-  }
-  else if (pressedChar("J")) {
-    if (key == "1" || key == "2" || key == "3" || key == "4") {
-      if (key == "1") {
-        for (let module of currentPattern.ruleModules) {
-          let tempSet = module.leftSet;
-          module.leftSet = module.aboveSet;
-          module.aboveSet = module.rightSet;
-          module.rightSet = tempSet;
-          for (let neighborhood of module.neighborhoods) {
-            let temp = neighborhood.left;
-            neighborhood.left = neighborhood.above;
-            neighborhood.above = neighborhood.right;
-            neighborhood.right = temp;
-          }
-        }
-      } else if (key == "2") {
-        for (let module of currentPattern.ruleModules) {
-          let tempSet = module.leftSet;
-          module.leftSet = module.aboveSet;
-          module.aboveSet = tempSet;
-          for (let neighborhood of module.neighborhoods) {
-            let temp = neighborhood.left;
-            neighborhood.left = neighborhood.above;
-            neighborhood.above = temp;
-          }
-        }
-      } else if (key == "3") {
-        for (let module of currentPattern.ruleModules) {
-          let tempSet = module.leftSet;
-          module.leftSet = module.rightSet;
-          module.rightSet = tempSet;
-          for (let neighborhood of module.neighborhoods) {
-            let temp = neighborhood.left;
-            neighborhood.left = neighborhood.right;
-            neighborhood.right = temp;
-          }
-        }
-      } else if (key == "4") {
-        for (let module of currentPattern.ruleModules) {
-          let tempSet = module.rightSet;
-          module.rightSet = module.aboveSet;
-          module.aboveSet = tempSet;
-          for (let neighborhood of module.neighborhoods) {
-            let temp = neighborhood.right;
-            neighborhood.right = neighborhood.above;
-            neighborhood.above = temp;
-          }
-        }
-      }
-      currentPattern.setArrayRuleFromRuleModules();
-      currentPattern.createRuleModules();
-      currentPattern.placeRuleModules();
-      refreshPatternsAndDraw();
-    } else if (key == "2") {
-    } else if (key == "3") {
-    } else if (key == "4") {
-    } else if (key == "5") {
-    } else if (key == "6") {
-    } else if (key == "7") {
-    } else if (key == "8") {
-    } else if (key == "9") {
-    } else if (key == "0") {
-    }
-  } else if (pressedChar("D")) {
-    if (key == "1") {
-      columns = 8 - 2;
-      rows = 16;
-    } else if (key == "2") {
-      columns = 16 - 2;
-      rows = 8;
-    } else if (key == "3") {
-      columns = 16 - 2;
-      rows = 32;
-    } else if (key == "4") {
-      columns = 32 - 2;
-      rows = 16;
-    } else if (key == "5") {
-      columns = 32 - 2;
-      rows = 64;
-    } else if (key == "6") {
-      columns = 64 - 2;
-      rows = 32;
-    } else if (key == "7") {
-      columns = 64 - 2;
-      rows = 128;
-    } else if (key == "8") {
-      columns = 128 - 2;
-      rows = 64;
-    } else if (key == "9") {
-      columns = 128 - 2;
-      rows = 256;
-    } else if (key == "0") {
-      columns = 256 - 2;
-      rows = 128;
-    }
-    if (int(key) < 10) {
-      sliderColumnsValue.html(columns);
-      sliderRowsValue.html(rows);
-      sliderRows.value(rows);
-      sliderColumns.value(columns);
-      randomizeGlobalSeed();
-      refreshPatternsAndDraw();
-    }
-    if (keyCode == UP_ARROW) {
-      rows = max(2, rows - (staggered ? 2 : 1) * (pressedKey(SHIFT) ? 10 : 1));
-      sliderRows.value(rows);
-      sliderRowsValue.html(rows);
-      refreshPatternsAndDraw();
-    } else if (keyCode == DOWN_ARROW) {
-      rows = rows + (staggered ? 2 : 1) * (pressedKey(SHIFT) ? 10 : 1);
-      sliderRows.value(rows);
-      sliderRowsValue.html(rows);
-      refreshPatternsAndDraw();
-    } else if (keyCode == LEFT_ARROW) {
-      columns = max(
-        4,
-        columns - (staggered ? 2 : 1) * (pressedKey(SHIFT) ? 10 : 1),
-      );
-      sliderColumns.value(columns);
-      sliderColumnsValue.html(columns);
-      updateSeedSizes();
-      refreshPatternsAndDraw();
-    } else if (keyCode == RIGHT_ARROW) {
-      columns = columns + (staggered ? 2 : 1) * (pressedKey(SHIFT) ? 10 : 1);
-      sliderColumns.value(columns);
-      sliderColumnsValue.html(columns);
-      updateSeedSizes();
-      refreshPatternsAndDraw();
-    }
-  } else if (pressedChar("R")) {
-    if (!pressedMetaKey()) {
-      if (pressedKey(SHIFT)) toggleRandom();
-      else toggleRandomize();
-    }
-  } else if (pressedChar("A")) {
-    if (keyCode == UP_ARROW) {
-      advanceCurrentPattern(pressedKey(SHIFT) ? 10 : 1);
-      draw();
-    }
-  } else if (key == "g") {
-    if (vverbose) console.log("Toggling grid layout.");
-    toggleGridLayout();
-    setCheckboxValue(checkboxGridLayout, gridLayout);
-  // } else if (key === "=") {
-  //   if (verbose) console.log("=");
-  //   if (comparisonLayout === "two") comparisonLayout = "three";
-  //   else if (comparisonLayout === "three") comparisonLayout = false;
-  //   else comparisonLayout = "two";
-  //   initializePatternsAndDraw();
-  } else if ( key == "c" && colors < 4 ) increaseColors();
-  else if (key == "C") decreaseColors();
-  else if (key == "b") {
-    toggleShowBorder();
-    setCheckboxValue(checkboxShowBorder, showBorder);
-  } else if (key == "o") {
-    if (vverbose) console.log(currentColorSet);
-    currentColorSet = colorSets[(currentColorSet.index + 1) % noColorSets];
-    customColors = false;
-    if (vverbose) console.log(selectColorScheme);
-    selectColorScheme.value(currentColorSet.getText());
-    updateSelectors();
-    toggleSelectColorScheme();
-  } else if (key == "O") {
-    currentColorSet =
-      colorSets[(currentColorSet.index + noColorSets - 1) % noColorSets];
-    customColors = false;
-    selectColorScheme.value(currentColorSet.getText());
-    updateSelectors();
-    toggleSelectColorScheme();
-  } else if (key == "P") {
-    colorMappingActive = nextPermutation(colorMapping);
-    if (vverbose) console.log("colorMapping:");
-    if (vverbose) console.log(colorMapping);
-    updateColorSchemeCanvas();
-    draw();
-  } else if (key == "v") {
-    let visualStyleNo = (getVisualStyleNumber(selectVisualStyle.value()) + 1) %
-      noVisualStyles;
-    visualStyle = getVisualStyleShortString(visualStyleNo);
-    selectVisualStyle.value(getVisualStyleLongString(visualStyle));
-    updateSelectors();
-    updateVisualStyle();
-    draw();
-  } else if (key == "V") {
-    let visualStyleNo =
-      (getVisualStyleNumber(selectVisualStyle.value()) + noVisualStyles - 1) %
-      noVisualStyles;
-    visualStyle = getVisualStyleShortString(visualStyleNo);
-    selectVisualStyle.value(getVisualStyleLongString(visualStyle));
-    updateSelectors();
-    updateVisualStyle();
-    draw();
-  } else if (key == "n") {
-    altColorMode = !altColorMode;
-    setCheckboxValue(checkboxAlternatingColors, altColorMode);
-    updateColorSchemeCanvas();
-    if (altColorMode) sliderModuloDiv.show();
-    else sliderModuloDiv.hide();
-    createColorsets();
-    draw();
-  } else if (key == "N") {
-    animateColors = !animateColors;
-    setCheckboxValue(checkboxAnimateColors, animateColors);
-    updateColorSchemeCanvas();
-    if (animateColors) {
-      animationFrameCount = 0;
-      altColorMode = true;
-      setCheckboxValue(checkboxAlternatingColors, altColorMode);
-      sliderModuloDiv.show();
-      checkboxAnimateColors.show();
-      colorModulo = rows;
-      sliderModuloRange.elt.value = colorModulo;
-      sliderModuloValue.html(colorModulo);
-      createColorsets();
-      loop();
-    } else noLoop();
-  } else if (key == "y") {
-    colorModulo = colorModulo + 1;
-    sliderModuloValue.html(colorModulo);
-    sliderModuloRange.elt.value = colorModulo;
-    createColorsets();
-    draw();
-  } else if (key == "Y") {
-    if (vverbose) console.log("Y");
-    colorModulo = max(2, colorModulo - 1);
-    sliderModuloValue.html(colorModulo);
-    sliderModuloRange.elt.value = colorModulo;
-    createColorsets();
-    draw();
-  } else if (key == "T") {
-    toggleThread();
-    setCheckboxValue(checkboxThread, showThread);
-  } else if (key == "t") {
-    selectMainLayout.value(nextMainLayout());
-    updateSelectors();
-    toggleSelectMainLayout();
-  } else if (key == "q") {
-    showBoundingBox = !showBoundingBox;
-    draw();
-  } else if (key == "(") {
-    showWrappingColumnLeft = !showWrappingColumnLeft;
-    setCheckboxValue(checkboxShowWrappingColumnLeft, showWrappingColumnLeft);
-    draw();
-  } else if (key == ")") {
-    showWrappingColumnRight = !showWrappingColumnRight;
-    setCheckboxValue(checkboxShowWrappingColumnRight, showWrappingColumnRight);
-    draw();
-  } else if (key == "u") {
-    toggleUpwards();
-    setCheckboxValue(checkboxUpwards, upwards);
-    draw();
-  } else if (key == "I") {
-    toggleDirectional();
-    setCheckboxValue(checkboxDirectional, directional);
-  } else if (key == "S") {
-    toggleStaggered();
-    setCheckboxValue(checkboxStaggered, staggered);
-  } else if (key == "w") {
-    toggleWrapping();
-    setCheckboxValue(checkboxWrapping, wrapping);
-  } else if (key == "e") {
-    if (vverbose) console.log("e");
-    resetToggles();
-    refreshPatternsAndDraw();
-  } else if (key == "x") {}
-  else if (key == "X") {
-    emptyURL();
-    setup();
-    draw();
-  } else if (key == "Y") {
-    currentPattern.applyDual();
-    refreshPatternsAndDraw();
-  } else if (key == "i") {
-    toggleMarkInactive();
-    setCheckboxValue(checkboxMarkInactive, markInactiveComponents);
-    draw();
-  } else if (key == "p") {
-    toggleShowPeriod();
-    setCheckboxValue(checkboxShowPeriod, showPeriod);
-    if (showPeriod) {
-      if (gridLayout) {
-        for (let n = 0; n < numberOfPatterns; n++) {
-          patterns[n].calculateRows();
-        }
-      } else currentPattern.calculateRows();
-    }
-    draw();
-  } else if (key == "m") {
-    let ruleCompressionNo =
-      (getRuleCompressionNumber(selectRuleCompression.value()) + 1) %
-      ruleCompressions.length;
-    ruleCompression = getRuleCompressionShortString(ruleCompressionNo);
-    selectRuleCompression.value(getRuleCompressionLongString(ruleCompression));
-    toggleSelectRuleCompression();
-    draw();
-  } else if (key == "M") {
-    let ruleCompressionNo =
-      (getRuleCompressionNumber(selectRuleCompression.value()) +
-        ruleCompressions.length - 1) % ruleCompressions.length;
-    ruleCompression = getRuleCompressionShortString(ruleCompressionNo);
-    selectRuleCompression.value(getRuleCompressionLongString(ruleCompression));
-    toggleSelectRuleCompression();
-    draw();
-  } else if (key == "G") toggleRuleGeneralizedCompress();
-  else if (key == " ") toggleRuleExpand();
-  else if (key == ".") {
-    toggleShowCounters();
-    setCheckboxValue(checkboxShowCounters, showCounters);
-  } else if (key == ",") {
-    toggleShowPercentages();
-    setCheckboxValue(checkboxShowPercentage, showPercentages);
-  // } else if (key == "+") {
-  //   analysisThreshold++;
-  //   currentPattern.analyzeArrayRule();
-  //   draw();
-  // } else if (key == "-") {
-  //   analysisThreshold = max(analysisThreshold - 1, 1);
-  //   currentPattern.analyzeArrayRule();
-  //   draw();
-  } else if (key == "z") screenshotDirect();
-  else if (key == "Z") screenshotAllLayouts();
-  else if (isNumeric(keyCode)) {
+  if (isNumeric(keyCode)) {
     seedType = getSeedTypeShortString(getNumber(keyCode));
     selectSeed.value(getSeedTypeLongString(seedType));
     toggleSelectSeed();
-  } else if (pressedArrow()) {
-    let activeModules = false;
-    for (let ruleModule of currentPattern.ruleModules) {
-      if (ruleModule.active === true) {
-        if (keyCode == UP_ARROW || keyCode == RIGHT_ARROW) {
-          ruleModule.incrementNext();
-          activeModules = true;
-        } else if (keyCode == DOWN_ARROW || keyCode == LEFT_ARROW) {
-          ruleModule.decrementNext();
-          activeModules = true;
-        }
+  } else if (pressedAltKey()) {
+    if (pressedChar("R")) {
+      if (pressedKey(SHIFT)) toggleRandom();
+      else toggleRandomize();
+    }
+    else if (pressedChar("C")) {
+      if ( !pressedKey(SHIFT) ) {
+        if (vverbose) console.log(currentColorSet);
+        currentColorSet = colorSets[(currentColorSet.index + 1) % noColorSets];
+        customColors = false;
+        if (vverbose) console.log(selectColorScheme);
+        selectColorScheme.value(currentColorSet.getText());
+        updateSelectors();
+        toggleSelectColorScheme();
+      } else {
+        currentColorSet =
+          colorSets[(currentColorSet.index + noColorSets - 1) % noColorSets];
+        customColors = false;
+        selectColorScheme.value(currentColorSet.getText());
+        updateSelectors();
+        toggleSelectColorScheme();
       }
     }
-    if (activeModules) {
-      currentPattern.setArrayRuleFromRuleModules();
-      startArrayRule = currentPattern.arrayRule;
-      draw();
-    } else {if (keyCode == UP_ARROW || keyCode == RIGHT_ARROW) {
-        currentPattern.incrementNextFromRulemodules();
-        currentPattern.setArrayRuleFromRuleModules();
-        initializePatternsAndDraw();
-      } else if (keyCode == DOWN_ARROW || keyCode == LEFT_ARROW) {
-        currentPattern.decrementNextFromRulemodules();
-        currentPattern.setArrayRuleFromRuleModules();
-        initializePatternsAndDraw();
-      }}
-  } else if (keyCode == ESCAPE) {
-    if (vverbose) console.log("ESCAPE");
-    for (let ruleModule of currentPattern.ruleModules) {
-      if (ruleModule.active === true) ruleModule.active = false;
+    else if (pressedChar("S")) {
+      if (!pressedKey(SHIFT)) screenshotDirect();
+      else screenshotAllLayouts();
     }
-    draw();
-  } else if (key == ">") currentPattern.printInfo();
-  else if (key == "PageUp" || key == "PageDown") {
-    if (preloadedCounter !== undefined) {
-      preloadedCounter =
-        (preloadedCounter + preloadedStrings.length +
-          (key == "PageUp" ? -1 : 1)) % preloadedStrings.length;
-      setPreloadedPattern(preloadedCounter);
-    } else {if (gridLayout) {
-        if (key == "PageDown") {
-          currentPattern = patterns[patterns.length - 1];
-          initializePatternsAndDraw();
-        } else history.back();
-      } else {
-        preloadedCounter = key == "PageUp" ? preloadedStrings.length - 1 : 0;
-        setPreloadedPattern(preloadedCounter);
-      }}
-    if (vverbose) {
-      console.log(
-        "    preloadedCounter = " + preloadedCounter +
-          "   preloadedStrings.length = " + preloadedStrings.length,
-      );
-    }
-    if (vverbose) {
-      console.log(
-        "Setting parameters from string : " +
-          preloadedStrings[preloadedCounter],
-      );
-    }
-    if (vverbose) console.log(preloadedStrings[preloadedCounter]);
-  } else if (keyCode == UP_ARROW || keyCode == DOWN_ARROW) {}
-  else if (key == "@") currentPattern.createRuleModulesFromNextSolution();
-  else if (key == "ø") {
-    let startShapeNo =
-      (getStartShapeNumber(selectStartShape.value()) + startShapes.length - 1) %
-      startShapes.length;
-    startShape = getStartShapeShortString(startShapeNo);
-    selectStartShape.value(getStartShapeLongString(startShape));
-    initializePatternsAndDraw();
-  } else if (key == "æ") {
-    let startShapeNo = (getStartShapeNumber(selectStartShape.value()) + 1) %
-      startShapes.length;
-    startShape = getStartShapeShortString(startShapeNo);
-    selectStartShape.value(getStartShapeLongString(startShape));
-    initializePatternsAndDraw();
   }
 }
+
+
 function thue(n) {
   if (n == 0) return 1;
   else {if (n % 2 == 0) return thue(n / 2);
