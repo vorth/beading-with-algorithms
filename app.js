@@ -1015,15 +1015,15 @@ function getVisualStyleLongString(n) {
   return defaultVisualStyle;
 }
 let seedTypes = [
-  [0, "random", "Random"],
-  [1, "single", "Single One"],
-  [2, "random-symmetric", "Random Symmetric"],
-  [3, "bands", "Bands"],
-  [4, "all-zero", "All Zero"],
-  [5, "periodic", "Periodic"],
-  [6, "all-one", "All One"],
-  [7, "explicit", "Explicit"],
-  [8, "periodic-explicit", "Periodic Explicit"],
+  [0, "random", "Random (0)"],
+  [1, "single", "Single One (1)"],
+  [2, "random-symmetric", "Random Symmetric (2)"],
+  [3, "bands", "Bands (3)"],
+  [4, "all-zero", "All Zero (4)"],
+  [5, "periodic", "Periodic (5)"],
+  [6, "all-one", "All One (6)"],
+  [7, "explicit", "Explicit (7)"],
+  [8, "periodic-explicit", "Periodic Explicit (8)"],
 ];
 function getSeedTypeNumber(n) {
   for (let s of seedTypes) if (s[0] == n || s[1] == n || s[2] == n) return s[0];
@@ -3048,10 +3048,20 @@ function keyPressed()
       inputShortCode.elt.focus();
     }}
   if (key == "Meta") return;
-  if (isNumeric(keyCode)) {
-    seedType = getSeedTypeShortString(getNumber(keyCode));
-    selectSeed.value(getSeedTypeLongString(seedType));
-    toggleSelectSeed();
+  if ( pressedChar("5") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '5 colors' );
+    setColors( 5 );
+  } else if ( pressedChar("6") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '6 colors' );
+    setColors( 6 );
+  }
+  else if (isNumeric(keyCode)) {
+    const n = getNumber(keyCode);
+    if ( n < 9 ) {
+      seedType = getSeedTypeShortString( n );
+      selectSeed.value(getSeedTypeLongString(seedType));
+      toggleSelectSeed();
+    }
   } else if (pressedAltKey()) {
     if (pressedChar("R")) {
       if (pressedKey(SHIFT)) toggleRandom();
@@ -3078,6 +3088,15 @@ function keyPressed()
     else if (pressedChar("S")) {
       if (!pressedKey(SHIFT)) screenshotDirect();
       else screenshotAllLayouts();
+    }
+    else if (pressedChar("V")) {
+      let visualStyleNo = (getVisualStyleNumber(selectVisualStyle.value()) + 1) %
+        noVisualStyles;
+      visualStyle = getVisualStyleShortString(visualStyleNo);
+      selectVisualStyle.value(getVisualStyleLongString(visualStyle));
+      updateSelectors();
+      updateVisualStyle();
+      draw();
     }
   }
 }
