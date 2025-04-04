@@ -3089,6 +3089,15 @@ function keyPressed()
       if (!pressedKey(SHIFT)) screenshotDirect();
       else screenshotAllLayouts();
     }
+    else if (pressedChar("V")) {
+      let visualStyleNo = (getVisualStyleNumber(selectVisualStyle.value()) + 1) %
+        noVisualStyles;
+      visualStyle = getVisualStyleShortString(visualStyleNo);
+      selectVisualStyle.value(getVisualStyleLongString(visualStyle));
+      updateSelectors();
+      updateVisualStyle();
+      draw();
+    }
   }
 }
 

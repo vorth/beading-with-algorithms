@@ -174,7 +174,7 @@
                     id="selectColorScheme">
                     <option disabled="disabled" selected="selected">Select color scheme</option>
                   </select></div>
-                <div class="beading-bar-col"><span>Visual style <!--<kbd>v/V</kbd>--></span> <select class="beading-select"
+                <div class="beading-bar-col"><span>Visual style <kbd>Alt</kbd>+<kbd>v</kbd></span> <select class="beading-select"
                     id="selectVisualStyle">
                     <option disabled="disabled" selected="selected">Select visual style</option>
                   </select></div>
@@ -424,6 +424,10 @@
                 <tr>
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
                   <td>Previous color scheme</td>
+                </tr>
+                <tr>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>Next visual style</td>
                 </tr>
                 <tr>
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>S</kbd></td>
