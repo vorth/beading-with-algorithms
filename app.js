@@ -1015,15 +1015,15 @@ function getVisualStyleLongString(n) {
   return defaultVisualStyle;
 }
 let seedTypes = [
-  [0, "random", "Random"],
-  [1, "single", "Single One"],
-  [2, "random-symmetric", "Random Symmetric"],
-  [3, "bands", "Bands"],
-  [4, "all-zero", "All Zero"],
-  [5, "periodic", "Periodic"],
-  [6, "all-one", "All One"],
-  [7, "explicit", "Explicit"],
-  [8, "periodic-explicit", "Periodic Explicit"],
+  [0, "random", "Random (0)"],
+  [1, "single", "Single One (1)"],
+  [2, "random-symmetric", "Random Symmetric (2)"],
+  [3, "bands", "Bands (3)"],
+  [4, "all-zero", "All Zero (4)"],
+  [5, "periodic", "Periodic (5)"],
+  [6, "all-one", "All One (6)"],
+  [7, "explicit", "Explicit (7)"],
+  [8, "periodic-explicit", "Periodic Explicit (8)"],
 ];
 function getSeedTypeNumber(n) {
   for (let s of seedTypes) if (s[0] == n || s[1] == n || s[2] == n) return s[0];
@@ -3056,9 +3056,12 @@ function keyPressed()
     setColors( 6 );
   }
   else if (isNumeric(keyCode)) {
-    seedType = getSeedTypeShortString(getNumber(keyCode));
-    selectSeed.value(getSeedTypeLongString(seedType));
-    toggleSelectSeed();
+    const n = getNumber(keyCode);
+    if ( n < 9 ) {
+      seedType = getSeedTypeShortString( n );
+      selectSeed.value(getSeedTypeLongString(seedType));
+      toggleSelectSeed();
+    }
   } else if (pressedAltKey()) {
     if (pressedChar("R")) {
       if (pressedKey(SHIFT)) toggleRandom();

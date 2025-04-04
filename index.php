@@ -144,10 +144,10 @@
                   <div class="beading-action-button" id="buttonRandomSeed">random seed</div>
                 </div>
                 <div class="beading-bar-col">
-                  <div class="flex"><span>Seed <kbd>0–9</kbd> <span class="beading-tooltip tooltip-above"
+                  <div class="flex"><span>Seed <kbd>0–8</kbd> <span class="beading-tooltip tooltip-above"
                         data-tip="The seed is the first row, or rows (depending on the rule), in the patterns. The seed, together with the rule, determines the pattern.">?</span></span>
                   </div><select class="beading-select" id="selectSeed">
-                    <option disabled="disabled" selected="selected">Select seed (0–9)</option>
+                    <option disabled="disabled" selected="selected">Select seed</option>
                   </select>
                 </div>
                 <div class="beading-inner-frame" style="display: none;" id="sliderSeedPeriodOptions">
@@ -414,7 +414,7 @@
                   <td>Selects a random rule</td>
                 </tr>
                 <tr>
-                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>0–9</kbd></td>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>0–8</kbd></td>
                   <td>Changes seed type</td>
                 </tr>
                 <tr>
