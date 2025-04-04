@@ -407,7 +407,6 @@
         <div class="w-full mb-2 text-2xl font-bold text-center">Keyboard shortcuts</div>
         <div class="flex flex-col md:flex-row md:gap-4">
           <div class="md:w-full">
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Basic</div>
             <table class="w-full table-sm shadow-red-500">
               <tbody>
                 <tr>
@@ -418,11 +417,6 @@
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>0–9</kbd></td>
                   <td>Changes seed type</td>
                 </tr>
-              </tbody>
-            </table>
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Styling</div>
-            <table class="w-full table-sm shadow-red-500">
-              <tbody>
                 <tr>
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>C</kbd></td>
                   <td>Next color scheme</td>
@@ -431,11 +425,6 @@
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
                   <td>Previous color scheme</td>
                 </tr>
-              </tbody>
-            </table>
-            <div class="mt-2 font-bold text-center text-red-700 border-b">Other shortcuts</div>
-            <table class="w-full table-sm shadow-red-500">
-              <tbody>
                 <tr>
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>S</kbd></td>
                   <td>Take a screenshot</td>
