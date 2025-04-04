@@ -3048,7 +3048,14 @@ function keyPressed()
       inputShortCode.elt.focus();
     }}
   if (key == "Meta") return;
-  if (isNumeric(keyCode)) {
+  if ( pressedChar("5") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '5 colors' );
+    setColors( 5 );
+  } else if ( pressedChar("6") && pressedKey( CONTROL ) && pressedKey( SHIFT ) ) {
+    console.log( '6 colors' );
+    setColors( 6 );
+  }
+  else if (isNumeric(keyCode)) {
     seedType = getSeedTypeShortString(getNumber(keyCode));
     selectSeed.value(getSeedTypeLongString(seedType));
     toggleSelectSeed();
