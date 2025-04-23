@@ -426,6 +426,10 @@
                   <td>Previous color scheme</td>
                 </tr>
                 <tr>
+                  <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>P</kbd></td>
+                  <td>Permute colors in scheme</td>
+                </tr>
+                <tr>
                   <td class="w-[200px] text-center mr-12 font-bold"><kbd>Alt</kbd>+<kbd>V</kbd></td>
                   <td>Next visual style</td>
                 </tr>
