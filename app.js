@@ -3066,8 +3066,13 @@ function keyPressed()
     if (pressedChar("R")) {
       if (pressedKey(SHIFT)) toggleRandom();
       else toggleRandomize();
-    }
-    else if (pressedChar("C")) {
+    } else if (pressedChar("P")) {
+      colorMappingActive = nextPermutation(colorMapping);
+      if (vverbose) console.log("colorMapping:");
+      if (vverbose) console.log(colorMapping);
+      updateColorSchemeCanvas();
+      draw();
+    } else if (pressedChar("C")) {
       if ( !pressedKey(SHIFT) ) {
         if (vverbose) console.log(currentColorSet);
         currentColorSet = colorSets[(currentColorSet.index + 1) % noColorSets];
