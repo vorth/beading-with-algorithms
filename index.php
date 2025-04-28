@@ -464,22 +464,18 @@
           </div>
         </div>
         <div class="flex justify-center">
-          <div class="text-center">Software by Roger Antonsen</div>
+          <div class="text-center">Software by <a href="https://rantonse.org/" target="_blank" rel="noopener noreferrer">Roger Antonsen</a></div>
         </div>
         <div class="flex justify-center">
-          <div class="text-center">Concept by Gwen Fisher</div>
+          <div class="text-center">Concept by <a href="https://gwenbeads.etsy.com" target="_blank" rel="noopener noreferrer">Gwen Fisher</a></div>
         </div>
         <div class="flex justify-center">
-          <div class="text-center">Special thanks to Scott Vorthmann</div>
+          <div class="text-center">Special thanks to <a href="https://www.vzome.com/author/" target="_blank" rel="noopener noreferrer">Scott Vorthmann</a></div>
         </div>
         <div class="flex flex-row w-full gap-2 my-2">
           <div><img class="w-full h-auto" src="files/ch1.t.png" alt=""></div>
           <div><img class="w-full h-auto" src="files/ch2.t.png" alt=""></div>
         </div>
-        <div class="mt-4 mb-2 text-2xl font-bold text-center text-gray-700 font-fun">Work-in-progress</div>
-        <div class="flex flex-col items-center"><a target="_blank" href="grid.php?all" class="external">Grid</a> <a
-            target="_blank" href="table.php?all" class="external">Table</a> <a target="_blank" href="colors.php"
-            class="external">Colors</a></div>
       </div>
     </label>
   </div>
